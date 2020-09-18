@@ -15,6 +15,7 @@ export class StudentComponent implements OnInit {
   studentService: StudentInfoService;
   http :HttpClient;
   @Output() id = new EventEmitter<number>();
+  @Output() message = new EventEmitter<string>();
 
   constructor(std: StudentInfoService, httpService: HttpClient) 
   {
@@ -25,7 +26,9 @@ export class StudentComponent implements OnInit {
   edit(id: number){
     this.id.emit(id);
   }
-
+  passMessage(message : string){
+    this.message.emit(message);
+  }
   ngOnInit(): void {
     setInterval(()=>{
     let obs = this.studentService.getStudents();
@@ -33,9 +36,16 @@ export class StudentComponent implements OnInit {
       this.students = response;
     });
   },1500);
-  
   }
   delete(i : number){
     this.studentService.deleteStudent(i);
+    let user: any = JSON.parse(localStorage.getItem('currentUser'));
+    if(user.authorities[0].authority == 'user'){
+      this.passMessage("You are not authorized to delete .");
+    }
+    else{
+      this.passMessage("deletion is successfull !");
+    }
+    
   }
 }

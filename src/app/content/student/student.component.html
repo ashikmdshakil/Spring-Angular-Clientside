@@ -20,7 +20,7 @@
                 <td class = "studentdepartment">{{student.department}}</td>
                 <input type = "hidden" value = {{student.id}}>
                 <td><button (click)= 'delete(student.id)' class="btn btn-primary deleteRow">Delete</button></td>
-                <td><button (click)= 'edit(student.id,student.name,student.mail, student.department)' class="btn btn-primary deleteRow">Edit</button></td>
+                <td><button (click)= 'edit(student.id)' class="btn btn-primary deleteRow">Edit</button></td>
               </tr>
             </tbody>
           </table>

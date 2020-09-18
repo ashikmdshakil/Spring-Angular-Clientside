@@ -14,9 +14,11 @@ export class ContentComponent{
   mail: string;
   department: string;
   password:  string;
-  role: string;
   http: HttpClient;
   student: Student; 
+  message: string = 'Welcome to my app !';
+  exist: boolean = false;
+
   constructor(http: HttpClient){
     this.http = http;
   }
@@ -37,8 +39,11 @@ export class ContentComponent{
       this.name = this.student.name;
       this.mail = this.student.mail;
       this.department = this.student.department;
-      this.password = this.student.password;
-      this.role = this.student.role; 
+      this.password = this.student.password; 
     });
+  }
+  passMessage(message: string){
+    this.message = message;
+    this.exist = true;
   }
 }

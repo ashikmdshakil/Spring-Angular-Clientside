@@ -1,3 +1,4 @@
+<app-alert [message] = "message" [exist] = "exist"></app-alert>
 <app-navbar></app-navbar>
-<app-student-form [id] = "id" [name] = "name" [mail] = "mail" [department] = "department" [password] = "password" [role] = "role"></app-student-form>
-<app-student (id) = "editStudent($event)"></app-student>
+<app-student-form [id] = "id" [name] = "name" [mail] = "mail" [department] = "department" [password] = "password" (message) = "passMessage($event)"></app-student-form>
+<app-student (id) = "editStudent($event)" (message) = "passMessage($event)"></app-student>

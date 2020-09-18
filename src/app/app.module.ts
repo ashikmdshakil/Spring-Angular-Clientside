@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './content/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { ContentComponent } from './content/content.component';
+import { AlertComponent } from './content/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContentComponent } from './content/content.component';
     StudentFormComponent,
     NavbarComponent,
     LoginComponent,
-    ContentComponent
+    ContentComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
