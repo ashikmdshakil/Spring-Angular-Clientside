@@ -51,7 +51,6 @@ export class StudentInfoService {
   });
    
     this.http.get('http://localhost:8080/update',{params: param1, headers: headers , responseType : "text"}).subscribe((response)=>{
-      console.log(response);
     });
   }
 
@@ -81,6 +80,7 @@ export class StudentInfoService {
 
   logout(){
     this.http.post('http://localhost:8080/logout',{});
+    localStorage.removeItem('currentUser');
   }
 
 }

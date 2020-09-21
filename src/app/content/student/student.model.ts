@@ -6,12 +6,9 @@ export class Student{
     mail: string;
     department: string;
     password: string;
-    role: string;
-    constructor(id: number, name: string, mail: string, department: string ){
-        this.id = id;
-        this.name = name;
-        this.mail = mail;
-        this.department = department;
+    roles: Role[];
+    constructor(){
+
     }
 
 }

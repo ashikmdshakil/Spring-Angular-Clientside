@@ -12,6 +12,7 @@ import { NavbarComponent } from './content/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { ContentComponent } from './content/content.component';
 import { AlertComponent } from './content/alert/alert.component';
+import { RoleComponent } from './content/role/role.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AlertComponent } from './content/alert/alert.component';
     NavbarComponent,
     LoginComponent,
     ContentComponent,
-    AlertComponent
+    AlertComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,

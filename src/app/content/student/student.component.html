@@ -21,6 +21,7 @@
                 <input type = "hidden" value = {{student.id}}>
                 <td><button (click)= 'delete(student.id)' class="btn btn-primary deleteRow">Delete</button></td>
                 <td><button (click)= 'edit(student.id)' class="btn btn-primary deleteRow">Edit</button></td>
+                <td><button (click) = 'editRole(student.id, student.mail, student.name, student.department)' class="btn btn-primary deleteRow">Set Role</button></td>
               </tr>
             </tbody>
           </table>

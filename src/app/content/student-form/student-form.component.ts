@@ -5,6 +5,7 @@ import { HttpClient , HttpParams } from '@angular/common/http';
 import { Student } from '../student/student.model';
 import { Input } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -53,5 +54,6 @@ export class StudentFormComponent implements OnInit {
   passMessage(message : string){
     this.message.emit(message);
   }
+ 
 
 }
